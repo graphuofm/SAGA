@@ -1,0 +1,25 @@
+# ============================================================
+# SAGA - Python 依赖列表
+# 第 1 批 / 共 10 批
+# 安装方式：pip install -r requirements.txt --break-system-packages
+# ============================================================
+
+# --- 核心通信 ---
+websockets>=12.0              # WebSocket 服务器（后端与前端实时通信）
+aiohttp>=3.9                  # 异步 HTTP 客户端（调用 Ollama / OpenAI API）
+
+# --- 高性能图生成（C 底层）---
+python-igraph>=0.11           # Phase 1 骨架生成，C 底层 Barabási-Albert 模型
+                              # 百万节点 <3 秒，比 NetworkX 快 40-60 倍
+
+# --- 高性能数据处理 ---
+numpy>=1.24                   # Phase 4 排序加速（C 底层 argsort）
+orjson>=3.9                   # JSON 序列化加速（C 底层，比标准库快 5-10x）
+
+# --- 配置管理 ---
+python-dotenv>=1.0            # 从 .env 文件加载环境变量
+
+# --- 可选：大规模场景额外依赖 ---
+# pandas>=2.0                 # 外部排序的分块读写（> 5000 万边时需要）
+# networkx>=3.1               # 回退方案（igraph 不可用时）
+# matplotlib>=3.7             # 导出报告中的图表（第 6 批实现）

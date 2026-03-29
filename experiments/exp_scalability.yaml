@@ -1,0 +1,18 @@
+experiment_name: scalability
+defaults:
+  domain: finance
+  rag_level: basic
+  gamma: 2.5
+  initial_balance: 1000
+  micro_granularity: minute
+  formats: [csv]
+  seed: 42
+runs:
+  - { name: n100,   nodes: 100,    days: 7 }
+  - { name: n500,   nodes: 500,    days: 14 }
+  - { name: n1K,    nodes: 1000,   days: 30 }
+  - { name: n5K,    nodes: 5000,   days: 30 }
+  - { name: n10K,   nodes: 10000,  days: 60 }
+  - { name: n50K,   nodes: 50000,  days: 60 }
+  - { name: n100K,  nodes: 100000, days: 90 }
+output_base: ./output/scalability

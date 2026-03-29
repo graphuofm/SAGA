@@ -1,0 +1,15 @@
+experiment_name: multi_domain
+defaults:
+  nodes: 1000
+  days: 30
+  gamma: 2.5
+  initial_balance: 1000
+  rag_level: full
+  formats: [json, csv]
+  seed: 42
+runs:
+  - { name: finance, domain: finance }
+  - { name: network, domain: network }
+  - { name: cyber,   domain: cyber }
+  - { name: traffic, domain: traffic }
+output_base: ./output/multi_domain

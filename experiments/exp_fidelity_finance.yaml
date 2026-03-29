@@ -1,0 +1,20 @@
+experiment_name: fidelity_finance
+defaults:
+  domain: finance
+  rag_level: full
+  gamma: 2.5
+  anomaly_rate: 0.1
+  initial_balance: 1000
+  macro_block: day
+  micro_granularity: minute
+  mode: vllm
+  concurrency: 256
+  formats: [json, csv]
+  seed: 42
+runs:
+  - { name: n100,  nodes: 100,   edges: 500,    days: 14 }
+  - { name: n500,  nodes: 500,   edges: 2500,   days: 30 }
+  - { name: n1K,   nodes: 1000,  edges: 5000,   days: 30 }
+  - { name: n5K,   nodes: 5000,  edges: 25000,  days: 60 }
+  - { name: n10K,  nodes: 10000, edges: 50000,  days: 90 }
+output_base: ./output/fidelity_finance

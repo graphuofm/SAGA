@@ -1,0 +1,19 @@
+experiment_name: anomaly_rate_control
+defaults:
+  nodes: 1000
+  days: 30
+  domain: finance
+  rag_level: full
+  gamma: 2.5
+  micro_granularity: minute
+  formats: [csv]
+  seed: 42
+runs:
+  - { name: bal_100,   initial_balance: 100 }
+  - { name: bal_500,   initial_balance: 500 }
+  - { name: bal_1000,  initial_balance: 1000 }
+  - { name: bal_2000,  initial_balance: 2000 }
+  - { name: bal_5000,  initial_balance: 5000 }
+  - { name: bal_10000, initial_balance: 10000 }
+  - { name: bal_50000, initial_balance: 50000 }
+output_base: ./output/controllability

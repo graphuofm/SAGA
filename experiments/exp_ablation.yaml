@@ -1,0 +1,17 @@
+experiment_name: ablation
+defaults:
+  nodes: 1000
+  days: 30
+  domain: finance
+  initial_balance: 1000
+  gamma: 2.5
+  formats: [json, csv]
+  seed: 42
+runs:
+  - { name: full_saga,          rag_level: full }
+  - { name: no_powerlaw,        rag_level: full, skeleton_mode: random_er }
+  - { name: no_semantics,       rag_level: full, injection_mode: random_attr }
+  - { name: no_alignment,       rag_level: full, skip_alignment: true }
+  - { name: no_rag,             rag_level: none }
+  - { name: no_unknown_balance, rag_level: full, force_known_balance: true }
+output_base: ./output/ablation

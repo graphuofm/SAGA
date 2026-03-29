@@ -1,0 +1,14 @@
+experiment_name: mock_vs_llm
+defaults:
+  nodes: 1000
+  days: 14
+  domain: finance
+  gamma: 2.5
+  initial_balance: 1000
+  rag_level: full
+  formats: [json, csv]
+  seed: 42
+runs:
+  - { name: mock, mode: mock }
+  - { name: llm,  mode: ollama }
+output_base: ./output/mock_vs_llm

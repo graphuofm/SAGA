@@ -1,0 +1,23 @@
+experiment_name: gamma_control
+defaults:
+  nodes: 5000
+  edges: 25000
+  days: 30
+  domain: finance
+  rag_level: basic
+  anomaly_rate: 0.1
+  initial_balance: 1000
+  mode: vllm
+  concurrency: 256
+  formats: [csv]
+  seed: 42
+runs:
+  - { name: g15, gamma: 1.5 }
+  - { name: g18, gamma: 1.8 }
+  - { name: g20, gamma: 2.0 }
+  - { name: g22, gamma: 2.2 }
+  - { name: g25, gamma: 2.5 }
+  - { name: g28, gamma: 2.8 }
+  - { name: g30, gamma: 3.0 }
+  - { name: g35, gamma: 3.5 }
+output_base: ./output/gamma_control

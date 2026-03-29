@@ -1,0 +1,39 @@
+/* ============================================================
+   SAGA - 全局样式（极简，大部分样式由 MUI + sx prop 处理）
+   第 7 批 / 共 10 批
+   ============================================================ */
+
+/* 重置 body margin/padding，让 MUI 的 CssBaseline 接管 */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 防止全局滚动，各面板自行管理溢出 */
+}
+
+/* 等宽字体类（日志、数字指标用） */
+.mono {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+/* 滚动条美化（浅色主题） */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* 选中文字颜色 */
+::selection {
+  background: rgba(25, 118, 210, 0.2);
+}
