@@ -14,15 +14,16 @@ Phase 4: State Machine → Global time sort → business rules → anomaly label
 ```
 
 ## Quick Start
-
 ```bash
-cd /home/jding/SAGA
+git clone https://github.com/graphuofm/SAGA.git
+cd SAGA
 bash scripts/setup.sh        # Install Python + Node deps
-cp .env.example .env         # Configure (edit if needed)
+cp .env.example .env         # Configure LLM backend
 python3 server.py            # Start backend (terminal 1)
 cd frontend && npm run dev   # Start frontend (terminal 2)
 # Open http://localhost:3000
 ```
+
 
 ## Scenarios
 
@@ -72,4 +73,4 @@ SAGA/
 
 ## License
 
-Academic use — VLDB 2026 Demo.
+Apache License 2.0 — see [LICENSE](LICENSE) for details.
