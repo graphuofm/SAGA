@@ -1,6 +1,6 @@
 # SAGA — Synthetic Agentic Graph Architecture
 
-> **Temporal Graph Data Generator for VLDB 2026 Demo**
+> **Temporal Graph Data Generator — accepted as a Demonstration at VLDB 2026 (PVLDB Vol. 19)**
 
 SAGA generates realistic temporal graphs with ground-truth anomaly labels, using a "skeleton-first, semantics-later" hybrid architecture.
 
@@ -70,6 +70,23 @@ SAGA/
 **WebSocket**: `start_pipeline` / `pause` / `resume` / `stop` / `inject_event` / `get_node_detail` / `infer_parameters`
 
 **HTTP**: `POST /estimate` / `GET /download` / `GET /download-log` / `GET /health`
+
+## Citation
+
+SAGA is accepted as a **demonstration at VLDB 2026** (Proceedings of the VLDB Endowment, Vol. 19). If you use SAGA in your research, please cite:
+
+```bibtex
+@article{ding2026saga,
+  author  = {Jiacheng Ding and Xiaofei Zhang},
+  title   = {{SAGA}: Synthetic Agentic Graph Architecture for Temporal Benchmark Generation},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {19},
+  number  = {12},
+  year    = {2026}
+}
+```
+
+> Final page numbers and DOI are assigned during the PVLDB camera-ready process (Issue 12) and will be filled in here once available.
 
 ## License
 
